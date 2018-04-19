@@ -1,7 +1,15 @@
 console.log('working');
 
-const weather_api = `http://api.openweathermap.org/data/2.5/weather?q=paris&appid=8ea4a4c502e12757ddbe03749288ce29`;
 const btn = document.querySelector('button');
+
+let city = document.querySelector('#city').value;
+let country = document.querySelector('#country');
+
+const api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+// let findCity = city;
+const api_key = '&appid=8ea4a4c502e12757ddbe03749288ce29';
+const weather_api = api + "new york" + api_key;
+
 
 function getWeather() {
     $.ajax({
@@ -14,13 +22,12 @@ function getWeather() {
   }
 
   function onSuccess(json) {
-      console.log(json.main.temp);
+      console.log(json);
   }
 
 btn.addEventListener('click', event => {
-    console.log('btn working');
+    // console.log(findCity);
     getWeather();
 })
-
 
 
