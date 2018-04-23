@@ -4,5 +4,15 @@ html {
 
 #weather {
     margin-top: 10%;
-    margin-left: 38%;
+    display: grid;
+    justify-content: center;
+}
+
+
+#submit {
+    font-size: xx-large;
+    background-color: deepskyblue;
+    border-radius: 20%;
+    font-family: monospace;
+    color: ivory;
 }
