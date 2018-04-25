@@ -3,7 +3,7 @@ console.log('working');
 const btn = document.querySelector('button');
 const api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const api_key = '&units=imperial&appid=8ea4a4c502e12757ddbe03749288ce29';
-const focus = document.querySelector('#city').focus();
+document.querySelector('#city').focus();
 
 btn.addEventListener('click', event => {
     let city = document.querySelector('#city').value;
