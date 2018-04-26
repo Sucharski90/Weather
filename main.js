@@ -1,10 +1,18 @@
 console.log('working');
 
+//create the api call and add a focus to the city input on page load
 const btn = document.querySelector('button');
 const api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const api_key = '&units=imperial&appid=8ea4a4c502e12757ddbe03749288ce29';
 document.querySelector('#city').focus();
 
+// get the checkboxes
+const humidity = document.querySelector('#humidity');
+const percipitation = document.querySelector('#percipitation');
+const wind = document.querySelector('#wind');
+const clouds = document.querySelector('#clouds');
+
+// call weather info on click of the btn 
 btn.addEventListener('click', event => {
     let city = document.querySelector('#city').value;
     let country = document.querySelector('#country');
@@ -35,6 +43,7 @@ btn.addEventListener('click', event => {
     displayInfo();
 })
 
+//get weather info on enter key press
 window.addEventListener('keydown', e => {
     if (e.keyCode === 13) {
     let city = document.querySelector('#city').value;
