@@ -1,18 +1,45 @@
-html {
-    background-color: aqua;
+ * {
+    margin: 0;
+    padding: 0;
 }
 
-#weather {
-    margin-top: 10%;
-    display: grid;
+ header {
+    min-height: 10vh;
+    background: aqua;
+}
+#check-boxes {
+    align-items: center;
     justify-content: center;
+    display: flex;
+    color: cyan;
+    font-size: medium;
+    font-family: sans-serif;
+    margin-top: 5%;
+}
+#weather {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
 }
 
-
-#submit {
-    font-size: xx-large;
-    background-color: deepskyblue;
-    border-radius: 20%;
-    font-family: monospace;
-    color: ivory;
+#submit:hover {
+    background: cyan;
 }
+
+.modal {
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+} 
