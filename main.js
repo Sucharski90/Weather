@@ -1,16 +1,10 @@
 console.log('working');
+document.querySelector('#city').focus();
 
 //create the api call and add a focus to the city input on page load
 const btn = document.querySelector('button');
 const api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const api_key = '&units=imperial&appid=8ea4a4c502e12757ddbe03749288ce29';
-document.querySelector('#city').focus();
-
-// get the checkboxes
-const humidity = document.querySelector('#humidity');
-const percipitation = document.querySelector('#percipitation');
-const wind = document.querySelector('#wind');
-const clouds = document.querySelector('#clouds');
 
 // call weather info on click of the btn 
 btn.addEventListener('click', event => {
@@ -35,8 +29,6 @@ btn.addEventListener('click', event => {
         newDiv.id = 'showWeather';
         let currentWeather = document.createTextNode("The current temp is " + " degrees Fahrenheit");
         newDiv.appendChild(currentWeather);
-
-
     }
     console.log(city);
     getWeather();
@@ -59,7 +51,6 @@ window.addEventListener('keydown', e => {
   
     });
   }
-
     function onSuccess(json) {
       console.log("The current temp is " + json.main.temp + " degrees Fahrenheit");
   }
@@ -69,10 +60,20 @@ window.addEventListener('keydown', e => {
         let currentWeather = document.createTextNode("The current temp is " + " degrees Fahrenheit");
         newDiv.appendChild(currentWeather);
 
-
+    }
+    function isChecked() {
+      let humidity = document.querySelector('#humidity').checked;
+      let percipitation = document.querySelector('#percipitation').checked;
+      let wind = document.querySelector('#wind').checked;
+      let clouds = document.querySelector('#clouds').checked;
+      
+      if (humidity == true) {
+        console.log(json.main.humidity);
+      }
     }
     console.log(city);
+    isChecked();
     getWeather();
     displayInfo();
     }
-})
+});
