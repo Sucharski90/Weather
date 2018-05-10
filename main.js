@@ -6,7 +6,7 @@ const btn = document.querySelector('button');
 const api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const api_key = '&units=imperial&appid=8ea4a4c502e12757ddbe03749288ce29';
 
-//get weather info on enter key press
+//
 function runCode() {
     let city = document.querySelector('#city').value;
     let country = document.querySelector('#country');
@@ -36,23 +36,23 @@ function runCode() {
         console.log("The current cloud coverage is " + json.clouds.all + "%");
       }
   };
-    function displayInfo() {
-        const newDiv = document.createElement('div');
-        newDiv.id = 'showWeather';
-        let currentWeather = document.createTextNode("The current temp is " + " degrees Fahrenheit");
-        newDiv.appendChild(currentWeather);
-    }
+
     console.log(city);
     getWeather();
-    displayInfo();
-    
   };
 
-
+//modal
+  let modal = document.querySelector('.modal');
+  let closeBtn = document.querySelector('#closeBtn');
+  
+  function openModal() {
+    modal.style.display = 'block';
+  };
+//triggers event
 window.addEventListener('keydown', e => {
   if (e.keyCode === 13) {
   runCode();
+  openModal();
   }
 });
-
-btn.addEventListener('click', runCode);
+btn.addEventListener('click', runCode, openModal);
