@@ -43,11 +43,21 @@ function runCode() {
 
 //modal
   let modal = document.querySelector('.modal');
-  let closeBtn = document.querySelector('#closeBtn');
+  let closeBtn = document.querySelector('.closeBtn');
   
   function openModal() {
     modal.style.display = 'block';
   };
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+  function outsideClick(e) {
+    if(e.target == modal) {
+    modal.style.display = 'none';
+    }
+  }
+
 //triggers event
 window.addEventListener('keydown', e => {
   if (e.keyCode === 13) {
@@ -55,4 +65,9 @@ window.addEventListener('keydown', e => {
   openModal();
   }
 });
-btn.addEventListener('click', runCode, openModal);
+btn.addEventListener('click', e => {
+  runCode();
+  openModal();
+});
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
