@@ -21,19 +21,19 @@ function runCode() {
     });
   }
     function onSuccess(json) {
-      console.log("The current temp is " + json.main.temp + "º F");
+      document.querySelector("#humidity-node").innerHTML = "The current temp is " + json.main.temp + "º F";
       let humidity = document.querySelector('#humidity').checked;
       let high = document.querySelector('#high').checked;
       let wind = document.querySelector('#wind').checked;
       let clouds = document.querySelector('#clouds').checked;
       if (humidity == true) {
-        document.querySelector("#humidity-node").innerHTML = "The current amount of humidity is " + json.main.humidity + "%";
+        document.querySelector("#humidity-node").innerHTML = "Current amount of humidity is " + json.main.humidity + "%";
       } if (high == true) {
-        document.querySelector("#high-node").innerHTML = "The high for today will be " + json.main.temp_max + "º F";
+        document.querySelector("#high-node").innerHTML = "High for today will be " + json.main.temp_max + "º F";
       } if (wind == true) {
-        document.querySelector("#wind-node").innerHTML = "The current wind speed is " + json.wind.speed + " mph";
+        document.querySelector("#wind-node").innerHTML = "Current wind speed is " + json.wind.speed + " mph";
       } if (clouds == true) {
-        document.querySelector("#clouds-node").innerHTML = "The current cloud coverage is " + json.clouds.all + "%";
+        document.querySelector("#clouds-node").innerHTML = "Current cloud coverage is " + json.clouds.all + "%";
       }
   };
 
