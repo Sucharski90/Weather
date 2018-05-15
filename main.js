@@ -27,13 +27,13 @@ function runCode() {
       let wind = document.querySelector('#wind').checked;
       let clouds = document.querySelector('#clouds').checked;
       if (humidity == true) {
-      console.log("The current amount of humidity is " + json.main.humidity + "%");
+        document.querySelector("#humidity-node").innerHTML = "The current amount of humidity is " + json.main.humidity + "%";
       } if (high == true) {
-        console.log("The high for today will be " + json.main.temp_max + "º F");
+        document.querySelector("#high-node").innerHTML = "The high for today will be " + json.main.temp_max + "º F";
       } if (wind == true) {
-        console.log("The current wind speed is " + json.wind.speed + " mph");
+        document.querySelector("#wind-node").innerHTML = "The current wind speed is " + json.wind.speed + " mph";
       } if (clouds == true) {
-        console.log("The current cloud coverage is " + json.clouds.all + "%");
+        document.querySelector("#clouds-node").innerHTML = "The current cloud coverage is " + json.clouds.all + "%";
       }
   };
 

@@ -17,7 +17,9 @@ header {
     justify-content: center;
     margin-top: 5%;
 }
-
+#city:hover {
+    background: cyan;
+}
 #submit:hover {
     background: cyan;
 }
