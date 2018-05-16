@@ -1,12 +1,15 @@
+body {
+    margin: 0px;
+}
 header {
     min-height: 10vh;
-    background: aqua;
+    background: rgb(25, 102, 48);
 }
 #check-boxes {
     align-items: center;
     justify-content: center;
     display: flex;
-    color: cyan;
+    color: rgb(25, 102, 48);
     font-size: medium;
     font-family: sans-serif;
     margin-top: 5%;
@@ -17,11 +20,9 @@ header {
     justify-content: center;
     margin-top: 5%;
 }
-#city:hover {
-    background: cyan;
-}
+
 #submit:hover {
-    background: cyan;
+    background: rgb(25, 102, 48);
 }
 
 .modal {
@@ -48,7 +49,7 @@ header {
     margin: 0;
 }
 .modal-header {
-    background: cyan;
+    background: rgb(25, 102, 48);
     padding: 15px;
     color: white;
 }
@@ -56,7 +57,7 @@ header {
     padding: 10px 20px;
 }
 .modal-footer {
-    background: cyan;
+    background: rgb(25, 102, 48);
     padding: 10px;
     color: white;
     text-align: center;
