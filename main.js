@@ -28,13 +28,24 @@ function runCode() {
       let clouds = document.querySelector('#clouds').checked;
       if (humidity == true) {
         document.querySelector("#humidity-node").innerHTML = "Current amount of humidity is " + json.main.humidity + "%";
-      } if (high == true) {
+      } else {
+        document.querySelector("#humidity-node").innerHTML = "";
+      };
+      if (high == true) {
         document.querySelector("#high-node").innerHTML = "High for today will be " + json.main.temp_max + "º F";
-      } if (wind == true) {
+      } else {
+        document.querySelector("#high-node").innerHTML = "";
+      };
+      if (wind == true) {
         document.querySelector("#wind-node").innerHTML = "Current wind speed is " + json.wind.speed + " mph";
-      } if (clouds == true) {
+      } else {
+        document.querySelector("#wind-node").innerHTML = "";
+      };
+      if (clouds == true) {
         document.querySelector("#clouds-node").innerHTML = "Current cloud coverage is " + json.clouds.all + "%";
-      }
+      }else {
+        document.querySelector("#clouds-node").innerHTML = "";
+      };
   };
 
     console.log(city);
