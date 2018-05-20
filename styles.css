@@ -5,6 +5,15 @@ header {
     min-height: 10vh;
     background: rgb(25, 102, 48);
 }
+h1 {
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #check-boxes {
     align-items: center;
     justify-content: center;
