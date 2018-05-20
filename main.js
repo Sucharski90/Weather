@@ -21,7 +21,7 @@ function runCode() {
     });
   }
     function onSuccess(json) {
-      document.querySelector("#humidity-node").innerHTML = "The current temp is " + json.main.temp + "º F";
+      document.querySelector("#current-node").innerHTML = "The current temp is " + json.main.temp + "º F";
       let humidity = document.querySelector('#humidity').checked;
       let high = document.querySelector('#high').checked;
       let wind = document.querySelector('#wind').checked;
