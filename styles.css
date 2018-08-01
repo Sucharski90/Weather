@@ -23,6 +23,9 @@ h1 {
     font-family: sans-serif;
     margin-top: 5%;
 }
+.check-boxes:hover {
+    font-size: 20px;
+}
 #weather {
     display: grid;
     align-items: center;
@@ -32,6 +35,7 @@ h1 {
 
 #submit:hover {
     background: rgb(25, 102, 48);
+    color: white;
 }
 
 .modal {
