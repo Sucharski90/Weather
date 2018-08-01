@@ -9,7 +9,6 @@ const api_key = '&units=imperial&appid=8ea4a4c502e12757ddbe03749288ce29';
 //
 function runCode() {
     let city = document.querySelector('#city').value;
-    let country = document.querySelector('#country');
     let weather_api = api + city + api_key;
 
     function getWeather() {
@@ -18,6 +17,7 @@ function runCode() {
       url: weather_api,
       data: $("form").serialize(),
       success: onSuccess,
+      error: onError,
     });
   }
     function onSuccess(json) {
@@ -47,10 +47,20 @@ function runCode() {
         document.querySelector("#clouds-node").innerHTML = "";
       };
   };
-
     console.log(city);
     getWeather();
   };
+
+  //handle errors
+  function onError() {
+    let city = document.querySelector('#city').value;
+    if(city == "") {
+      document.querySelector("#current-node").innerHTML = "Enter a City"
+    }
+    //just to see if this works
+    console.log("bad")
+  }
+
 
 //modal
   let modal = document.querySelector('.modal');
