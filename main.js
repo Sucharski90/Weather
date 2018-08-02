@@ -54,7 +54,7 @@ function runCode() {
   //handle errors
   function onError() {
     let city = document.querySelector('#city').value;
-    if(city == "") {
+    if(city == "" || city != NaN) {
       document.querySelector("#current-node").innerHTML = "Enter a City"
     }
     //just to see if this works
